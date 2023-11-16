@@ -16,7 +16,7 @@ namespace Seafood
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Seafood", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "KeyOnline", id = UrlParameter.Optional }
             );
         }
     }

@@ -1,0 +1,73 @@
+﻿@media (max-width: 600px) {
+    .screen-image {
+        margin-left: -40px !important;
+        width: 120% !important;
+    }
+}
+
+.container-keyOnline {
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.div-title {
+    text-align: start;
+    color: #800000;
+}
+
+.form-napthengay {
+    margin: 30px auto 20px !important;
+    border: 1px solid #e5e5e5;
+    padding: 30px 30px 30px 40px;
+    max-width: 500px;
+    text-align: start;
+}
+
+.form-horizontal .form-group {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.form-group {
+    max-width: 450px;
+    display: flex;
+}
+
+    .form-group label {
+        width: 80px;
+        text-align: start !important;
+    }
+
+    .form-group div {
+        flex: 1;
+    }
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+    width: 25%;
+}
+
+th {
+    background: #dee8fc;
+}
+
+td {
+    /*color: #e3165b;*/
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
