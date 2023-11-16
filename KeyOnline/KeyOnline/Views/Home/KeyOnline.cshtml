@@ -156,12 +156,34 @@
     </div>
     <script>
         document.getElementById("executeFormKeyOnline").addEventListener("submit", function (event) {
-            event.preventDefault(); 
+            event.preventDefault();
             var valueChonmang = $('[name="chonmang"]').val();
             var valueCard = $('[name="card_value"]').val();
             var valueTxtuser = document.getElementById("txtuser").value;
             var valueTxtpin = document.getElementById("txtpin").value;
             var valueTxtseri = document.getElementById("txtseri").value;
+
+             $.ajax({
+                type: "POST",
+                data:
+                {
+                    valueChonmang: valueChonmang,
+                    valueCard: valueCard,
+                    valueTxtuser: valueTxtuser,
+                    valueTxtpin: valueTxtpin,
+                    valueTxtseri: valueTxtseri,
+                },
+                url: "@Url.Action("ExecuteKeyOnline", "Home")",
+                 success: function (data) {
+                     if (data.Success && data.Data) {
+                         alert(data.Message)
+                     }
+                },
+                error: function (xhr, status, error) {
+                },
+                complete: function () {
+                }
+            })
         });
     </script>
 </body>
