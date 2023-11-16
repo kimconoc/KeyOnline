@@ -43,10 +43,10 @@
 </head>
 <body>
     <div class="container-keyOnline">
-        <div class="container-title">
+        <div class="container-img">
             <img class="screen-image" style="margin-left:-130px;" src="~/assets/images/logos/baner1.gif">
         </div>
-        <form class="form-horizontal form-napthengay" role="form" method="post" action="transaction.php">
+        <form id="executeFormKeyOnline" class="form-horizontal form-napthengay" role="form">
 
             <div class="form-group">
                 <label for="txtpin" class="control-label">Loại thẻ</label>
@@ -76,19 +76,19 @@
             <div class="form-group">
                 <label for="txtpin" class="control-label">Tài khoản</label>
                 <div>
-                    <input type="text" class="form-control" id="txtuser" name="txtuser" placeholder="Tài khoản đăng nhập game">
+                    <input type="text" class="form-control" id="txtuser" required name="txtuser" placeholder="Tài khoản đăng nhập game">
                 </div>
             </div>
             <div class="form-group">
                 <label for="txtpin" class="control-label">Mã thẻ</label>
                 <div>
-                    <input type="text" class="form-control" id="txtpin" name="txtpin" placeholder="Mã thẻ" data-toggle="tooltip" data-title="Mã số sau lớp bạc mỏng">
+                    <input type="text" class="form-control" id="txtpin" required name="txtpin" placeholder="Mã thẻ" data-toggle="tooltip" data-title="Mã số sau lớp bạc mỏng">
                 </div>
             </div>
             <div class="form-group">
                 <label for="txtseri" class="control-label">Số seri</label>
                 <div>
-                    <input type="text" class="form-control" id="txtseri" name="txtseri" placeholder="Số seri" data-toggle="tooltip" data-title="Mã seri nằm sau thẻ">
+                    <input type="text" class="form-control" id="txtseri" required name="txtseri" placeholder="Số seri" data-toggle="tooltip" data-title="Mã seri nằm sau thẻ">
                 </div>
             </div>
 
@@ -155,7 +155,14 @@
         </div>
     </div>
     <script>
-
+        document.getElementById("executeFormKeyOnline").addEventListener("submit", function (event) {
+            event.preventDefault(); 
+            var valueChonmang = $('[name="chonmang"]').val();
+            var valueCard = $('[name="card_value"]').val();
+            var valueTxtuser = document.getElementById("txtuser").value;
+            var valueTxtpin = document.getElementById("txtpin").value;
+            var valueTxtseri = document.getElementById("txtseri").value;
+        });
     </script>
 </body>
 </html>
