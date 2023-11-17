@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using Seafood.Helper;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
@@ -12,6 +13,8 @@ namespace Seafood
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            AppConfigs.ReadConfigs();
         }
 
         //protected void Application_AuthenticateRequest(Object sender, EventArgs e)
